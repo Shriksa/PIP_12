@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 public class Main {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Student student1 = new Student();
         student1.name = "Valerii Andriushchenko";
         student1.Rok = 1000;
@@ -11,10 +13,11 @@ public class Main {
         System.out.println("Student 1 Rok: " + student1.Rok);
         System.out.println("Student 2 Rok: " + student2.Rok);
         printStaticHello();
-        printHello();
         SecretStudent secretStudent = new SecretStudent();
         System.out.println("Imie Sekretnego studena: " + secretStudent.OtkrycImie());
-        secretStudent.Podajimie("Piotr");
+        Scanner button = new Scanner(System.in);
+        String n = button.nextLine();
+        secretStudent.Podajimie(n);
         System.out.println("Imie Sekretnego studena: " + secretStudent.OtkrycImie());
     }
     public static void printStaticHello() {
